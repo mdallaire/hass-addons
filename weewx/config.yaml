@@ -1,0 +1,19 @@
+# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
+name: Weewx
+version: "v5.1.0-1"
+slug: weewx
+description: Add-on that run the weewx weather service.
+url: "https://github.com/mdallaire/hass-addons/weewx"
+arch:
+  - aarch64
+  - amd64
+init: false
+apparmor: false
+#uart: true
+#udev: true
+map:
+  - type: addon_config
+    read_only: false
+    path: /addon_config
+
+image: "ghcr.io/mdallaire/{arch}-addon-weewx"
