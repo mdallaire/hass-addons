@@ -1,7 +1,6 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-dockerfile
 ARG BUILD_FROM
-#FROM $BUILD_FROM
-FROM ghcr.io/home-assistant/amd64-base:3.15
+FROM $BUILD_FROM
 
 # renovate: depName=waterfurnace_aurora datasource=rubygems
 ENV VERSION=1.4.11

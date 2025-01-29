@@ -1,5 +1,9 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## 1.4.11-6
+
+- Fix: build from
+
 ## 1.4.11-5
 
 - Repo rename
