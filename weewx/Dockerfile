@@ -20,9 +20,7 @@ RUN \
     apk add --no-cache \
         bash \
         gcc \
-        unzip \
-        && \
-        pip install uv
+        unzip
 
 RUN \
     uv pip install --system weewx==${VERSION} \
