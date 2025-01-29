@@ -18,7 +18,7 @@ ENV \
     HOME="/addon_config"
 RUN \
     apk add --no-cache \
-        python3-pip \
+        py3-pip \
         bash \
         gcc \
         unzip
