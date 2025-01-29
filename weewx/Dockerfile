@@ -11,8 +11,6 @@ ARG TEMPIO_VERSION BUILD_ARCH
 ENV \
     PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
-    UV_SYSTEM_PYTHON=true \
-    UV_NO_CACHE=true \
     PIP_ROOT_USER_ACTION=ignore \
     PIP_NO_CACHE_DIR=1 \
     PIP_DISABLE_PIP_VERSION_CHECK=1 \
@@ -20,23 +18,21 @@ ENV \
     HOME="/addon_config"
 RUN \
     apk add --no-cache \
-        uv \
-        python3 \
+        python3-pip \
         bash \
         gcc \
         unzip
 
 RUN \
-    uv pip install --system weewx==${VERSION} \
+    pip install weewx==${VERSION} \
     && \
-    uv pip install --system \
+    pip install \
         paho-mqtt \
         #python-cjson \
         ujson \
         ephem \
         urllib3 \
         influxdb
-
 
 COPY entrypoint.sh /
 RUN chmod +x /entrypoint.sh
