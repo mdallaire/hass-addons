@@ -16,7 +16,7 @@ else
         export MQTT_USERNAME=$(bashio::services mqtt "username")
         export MQTT_PASSWORD=$(bashio::services mqtt "password")
         bashio::log.info "Configuring '$MQTT_USERNAME' mqtt user"
-        export MQTT=mqtt://$MQTT_USERNAME:$MQTT_PASSWORD@$MQTT_HOST:$MQTT_PORT
+        export MQTT="mqtt://$MQTT_USERNAME:$MQTT_PASSWORD@$MQTT_HOST:$MQTT_PORT"
     fi
 fi
 
