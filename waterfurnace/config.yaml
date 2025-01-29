@@ -1,0 +1,21 @@
+# https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
+name: Waterfurnace-Aurora
+version: "v1.4.8-1"
+slug: waterfurnace
+description: Add-on that run the waterfurnace-aurora service to interface with your geothermal heatpump.
+url: "https://github.com/mdallaire/hass-addon-waterfurnace-aurora"
+arch:
+  - aarch64
+  - amd64
+init: false
+apparmor: false
+uart: true
+udev: true
+services:
+  - mqtt:need
+options:
+  tty: /dev/serial/by-id/usb-FTDI_FT232R_USB_UART_AB0LICHU-if00-
+schema:
+  tty: "str"
+  mqtt: "str?"
+image: "ghcr.io/home-assistant/{arch}-addon-example"
