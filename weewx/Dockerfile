@@ -19,6 +19,7 @@ ENV \
 RUN \
     apk add --no-cache \
         uv \
+        python3 \
         bash \
         gcc \
         unzip
