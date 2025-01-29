@@ -1,9 +1,9 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration#add-on-config
 name: Waterfurnace-Aurora
-version: "v1.4.11-4"
+version: "v1.4.11-5"
 slug: waterfurnace
 description: Add-on that run the waterfurnace aurora ruby gem to interface with your geothermal heatpump.
-url: "https://github.com/mdallaire/hass-addon-waterfurnace-aurora"
+url: "https://github.com/mdallaire/hass-addons/waterfurnace"
 arch:
   - aarch64
   - amd64
