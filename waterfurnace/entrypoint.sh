@@ -20,4 +20,4 @@ else
     fi
 fi
 
-ruby aurora_mqtt_bridge $TTY $MQTT
+aurora_mqtt_bridge $TTY $MQTT

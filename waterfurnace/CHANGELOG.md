@@ -1,5 +1,9 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## 1.4.11-4
+
+- Fix entrypoint.sh
+
 ## 1.4.11-3
 
 - Fix MQTT config
