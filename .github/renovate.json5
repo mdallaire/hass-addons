@@ -13,17 +13,14 @@
     'prIgnoreNotification',
   ],
 
-  customManagers: [
+  "customManagers": [
     {
-      customType: 'regex',
-      description: 'Process custom dependencies',
-      fileMatch: [
-        'Dockerfile',
-      ],
-      matchStrings: [
+      "customType": "regex",
+      "description": "Update _VERSION variables in Dockerfiles",
+      "fileMatch": ["(^|/|\\.)Dockerfile$", "(^|/)Dockerfile\\.[^/]*$"],
+      "matchStrings": [
         "# renovate: datasource=(?<datasource>[a-z-]+?)(?: depName=(?<depName>.+?))? packageName=(?<packageName>.+?)(?: versioning=(?<versioning>[a-z-]+?))?\\s(?:ENV|ARG) .+?_VERSION=(?<currentValue>.+?)\\s"
       ]
-    },
-
-  ],
+    }
+  ]
 }
