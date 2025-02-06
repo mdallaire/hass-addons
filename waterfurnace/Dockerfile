@@ -2,8 +2,8 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
-# renovate: datasource=rubygems packageName=waterfurnace_aurora
-ENV VERSION=1.4.11
+# renovate: datasource=rubygems depName=packageName=waterfurnace_aurora
+ENV WATERFURNACE_AURORA_VERSION=1.5.5
 
 # Execute during the build of the image
 ARG TEMPIO_VERSION BUILD_ARCH
@@ -15,7 +15,7 @@ RUN \
 
 RUN \
     apk add --no-cache ca-certificates openssl ruby ruby-ffi && \
-    gem install waterfurnace_aurora -v ${VERSION}
+    gem install waterfurnace_aurora -v ${WATERFURNACE_AURORA_VERSION}
 
 RUN apk del --purge .build-deps
 
