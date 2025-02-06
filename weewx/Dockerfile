@@ -3,7 +3,7 @@ ARG BUILD_FROM
 FROM $BUILD_FROM
 
 
-# renovate: depName=weewx datasource=pypi
+# renovate: datasource=pypi packageName=weewx
 ENV VERSION=5.1.0
 
 # Execute during the build of the image
