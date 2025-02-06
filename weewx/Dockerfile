@@ -3,7 +3,7 @@ ARG BUILD_FROM
 FROM $BUILD_FROM
 
 
-# renovate: depName=waterfurnace_aurora datasource=rubygems
+# renovate: depName=weewx datasource=pypi
 ENV VERSION=5.1.0
 
 # Execute during the build of the image
