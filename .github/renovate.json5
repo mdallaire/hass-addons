@@ -16,18 +16,10 @@
   customManagers: [
     {
       customType: 'regex',
-      description: 'Process Tekton dependencies',
-      fileMatch: [
-        '(^|/)kubernetes/.+\\.ya?ml(\\.j2)?$',
-      ],
-      matchStrings: [
-        'depName=(?<depName>\\S+)?\n.*?(?<currentValue>v\\d+\\.\\d+\\.\\d+)',
-      ],
-      datasourceTemplate: 'github-releases',
-    },
-    {
-      customType: 'regex',
       description: 'Process custom dependencies',
+      fileMatch: [
+        'Dockerfile',
+      ],
       matchStrings: [
         'datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)( versioning=(?<versioning>\\S+))?\n.*?"(?<currentValue>.*)"\n',
         'datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)( versioning=(?<versioning>\\S+))?\n.*?-\\s(.*?)/(?<currentValue>(v|\\d)[^/]+)/\\S+\n',
