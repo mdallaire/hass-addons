@@ -4,7 +4,7 @@ export MQTT=$(bashio::config 'mqtt')
 export TTY=$(bashio::config 'tty')
 
 # Try Hassio MQTT Auto-Configuration
-if ! bashio::services.available "mqtt" && ! bashio::config.exists 'mqtt_server'; then
+if ! bashio::services.available "mqtt" && ! bashio::config.exists 'mqtt'; then
     bashio::exit.nok "No internal MQTT service found and no MQTT server defined. Please install Mosquitto broker or specify your own."
 else
     bashio::log.info "MQTT available, fetching server detail ..."

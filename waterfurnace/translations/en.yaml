@@ -1,0 +1,7 @@
+configuration:
+  tty:
+    name: Serial port
+    description: The serial port to use to communicate with the Waterfurnace Aurora
+  mqtt:
+    name: MQTT Connection string
+    description: The MQTT connection string in the following format: mqtt(s)://username:password@host:port
