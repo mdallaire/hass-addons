@@ -1,5 +1,9 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## 1.5.5-3
+
+- Fix: Temporary disable arm64 builds
+
 ## 1.5.5-2
 
 - Fix: mqtt config string
