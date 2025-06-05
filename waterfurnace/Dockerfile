@@ -2,7 +2,7 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
-# renovate: datasource=rubygems depName=packageName=waterfurnace_aurora
+# renovate: datasource=rubygems packageName=waterfurnace_aurora
 ENV WATERFURNACE_AURORA_VERSION=1.5.7
 
 # Execute during the build of the image

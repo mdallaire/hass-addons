@@ -18,11 +18,12 @@
       "customType": "regex",
       "description": "Update _VERSION variables in Dockerfiles",
       "fileMatch": [
-        "(^|/|\\.)Dockerfile$", "(^|/)Dockerfile\\.[^/]*$",
-        "build.yaml"],
-
+        "(^|/|\\.)Dockerfile$", 
+        "(^|/)Dockerfile\\.[^/]*$",
+        "build.yaml"
+      ],
       "matchStrings": [
-        "# renovate: datasource=(?<datasource>[a-z-]+?)(?: depName=(?<depName>.+?))? packageName=(?<packageName>.+?)(?: versioning=(?<versioning>[a-z-]+?))?\\s(?:ENV|ARG) .+?_VERSION=(?<currentValue>.+?)\\s"
+        "# renovate: datasource=(?<datasource>[a-z-]+?)(?:\\s+depName=(?<depName>[^\\s]+?))?(?:\\s+packageName=(?<packageName>[^\\s]+?))?(?:\\s+versioning=(?<versioning>[a-z-]+?))?\\s*\\n(?:ENV|ARG)\\s+(?:[A-Z_]*_)?VERSION=(?<currentValue>[^\\s]+)"
       ]
     }
   ]
