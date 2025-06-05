@@ -12,19 +12,18 @@
   suppressNotifications: [
     'prIgnoreNotification',
   ],
-
-  "customManagers": [
+  customManagers: [
     {
-      "customType": "regex",
-      "description": "Update _VERSION variables in Dockerfiles",
-      "fileMatch": [
-        "(^|/|\\.)Dockerfile$", 
-        "(^|/)Dockerfile\\.[^/]*$",
-        "build.yaml"
+      customType: 'regex',
+      description: 'Update _VERSION variables in Dockerfiles',
+      managerFilePatterns: [
+        '/(^|/|\\.)Dockerfile$/',
+        '/(^|/)Dockerfile\\.[^/]*$/',
+        '/build.yaml/',
       ],
-      "matchStrings": [
-        "# renovate: datasource=(?<datasource>[a-z-]+?)(?:\\s+depName=(?<depName>[^\\s]+?))?(?:\\s+packageName=(?<packageName>[^\\s]+?))?(?:\\s+versioning=(?<versioning>[a-z-]+?))?\\s*\\n(?:ENV|ARG)\\s+(?:[A-Z_]*_)?VERSION=(?<currentValue>[^\\s]+)"
-      ]
-    }
-  ]
+      matchStrings: [
+        '# renovate: datasource=(?<datasource>[a-z-]+?)(?:\\s+depName=(?<depName>[^\\s]+?))?(?:\\s+packageName=(?<packageName>[^\\s]+?))?(?:\\s+versioning=(?<versioning>[a-z-]+?))?\\s*\\n(?:ENV|ARG)\\s+(?:[A-Z_]*_)?VERSION=(?<currentValue>[^\\s]+)',
+      ],
+    },
+  ],
 }
