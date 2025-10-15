@@ -4,7 +4,7 @@ FROM $BUILD_FROM
 
 
 # renovate: datasource=pypi packageName=weewx
-ENV VERSION=5.1.0
+ENV VERSION=5.2.0
 
 # Execute during the build of the image
 ARG TEMPIO_VERSION BUILD_ARCH
