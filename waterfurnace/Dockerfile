@@ -3,7 +3,7 @@ ARG BUILD_FROM
 FROM $BUILD_FROM
 
 # renovate: datasource=rubygems packageName=waterfurnace_aurora
-ENV WATERFURNACE_AURORA_VERSION=1.5.7
+ENV WATERFURNACE_AURORA_VERSION=1.5.8
 
 # Execute during the build of the image
 ARG TEMPIO_VERSION BUILD_ARCH
