@@ -1,5 +1,9 @@
 <!-- https://developers.home-assistant.io/docs/add-ons/presentation#keeping-a-changelog -->
 
+## 1.6.4-1
+
+- Fix: Bump waterfurnace_aurora
+
 ## 1.5.7-1
 
 - Fix: Bump waterfurnace_aurora
